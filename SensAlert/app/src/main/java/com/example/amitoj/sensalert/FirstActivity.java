@@ -7,16 +7,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 
 public class FirstActivity extends ActionBarActivity {
 
-    private Button b;
+    private ImageButton b;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        //b=(Button)findViewById(R.id.imageButton);
+        b=(ImageButton)findViewById(R.id.imageButton);
 
 
     }
@@ -28,10 +29,12 @@ public class FirstActivity extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_first, menu);
         return true;
     }
-    public void onClick(View v) {
+    public void sendMessage(View v) {
         Intent in=new Intent(FirstActivity.this,SensorActivity.class);
         //Bundle bun=new Bundle();
         //in.putExtras(bun);
+        Intent in1=getIntent();
+
         startActivity(in);
 
     }

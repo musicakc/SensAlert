@@ -7,15 +7,6 @@
     android:background="@drawable/bg"
     android:clickable="true">
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="134dp" />
-
 
     <TextView
         android:layout_width="250dp"
@@ -34,13 +25,16 @@
         android:layout_centerHorizontal="true" />
 
     <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/imageButton"
+        android:onClick="sendMessage"
         android:background="@drawable/round_button"
-        android:layout_below="@+id/progressBar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp" />
+        android:src="@drawable/small_logo"
+        android:contentDescription="@string/abc_action_bar_home_description"
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

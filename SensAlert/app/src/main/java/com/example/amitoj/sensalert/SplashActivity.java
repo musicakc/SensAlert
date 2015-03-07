@@ -20,15 +20,14 @@ public class SplashActivity extends ActionBarActivity {
             public void run() {
                 try {
                     super.run();
-                    sleep(10000);  //Delay of 10 seconds
+                    sleep(5000);  //Delay of 5 seconds
                 } catch (Exception e) {
 
                 } finally {
 
-                    Intent i = new Intent(SplashActivity.this,
-                            FirstActivity.class);
-                    startActivity(i);
-                    finish();
+                    Intent i = new Intent(SplashActivity.this,FirstActivity.class);
+                    SplashActivity.this.startActivity(i);
+                    SplashActivity.this.finish();
                 }
             }
         };
