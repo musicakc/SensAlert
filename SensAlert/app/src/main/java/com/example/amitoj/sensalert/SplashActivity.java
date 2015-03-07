@@ -1,6 +1,7 @@
 package com.example.amitoj.sensalert;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,23 +15,17 @@ public class SplashActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Thread welcomeThread = new Thread() {
-
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                try {
-                    super.run();
-                    sleep(5000);  //Delay of 5 seconds
-                } catch (Exception e) {
+                Intent openMainActivity =  new Intent(SplashActivity.this, FirstActivity.class);
+                startActivity(openMainActivity);
+                overridePendingTransition(R.anim.abc_fade_out, R.anim.abc_slide_out_top);
+                finish();
 
-                } finally {
-
-                    Intent i = new Intent(SplashActivity.this,FirstActivity.class);
-                    SplashActivity.this.startActivity(i);
-                    SplashActivity.this.finish();
-                }
             }
-        };
+        }, 10000);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
