@@ -48,7 +48,7 @@ public class SensorActivity extends Activity implements SensorEventListener, Vie
 
         if (mLight == null) {
             Toast.makeText(SensorActivity.this,
-                    "No Light Sensor! quit-",
+                    "No Light Sensor! Quit!",
                     Toast.LENGTH_LONG).show();
         } else {
             float max = mLight.getMaximumRange();
@@ -59,7 +59,7 @@ public class SensorActivity extends Activity implements SensorEventListener, Vie
         }
         if (mPressure == null) {
             Toast.makeText(SensorActivity.this,
-                    "No Pressure Sensor! quit-",
+                    "No Pressure Sensor! Quit!",
                     Toast.LENGTH_LONG).show();
         } else {
             float max = mPressure.getMaximumRange();
@@ -70,7 +70,7 @@ public class SensorActivity extends Activity implements SensorEventListener, Vie
         }
         if (mHeat == null) {
             Toast.makeText(SensorActivity.this,
-                    "No Heat Sensor! quit-",
+                    "No Heat Sensor! Quit!",
                     Toast.LENGTH_LONG).show();
         } else {
             float max = mHeat.getMaximumRange();
@@ -119,7 +119,7 @@ public class SensorActivity extends Activity implements SensorEventListener, Vie
                     public void onClick(View v) {
                         // TODO Auto-generated method stub
                         //display.setText("" + String.valueOf(currentReading));
-                        Toast t=Toast.makeText(getApplicationContext(),formattedNumber,Toast.LENGTH_LONG);
+                        Toast.makeText(getApplicationContext(),formattedNumber,Toast.LENGTH_LONG).show();
 
 
                     }
@@ -137,7 +137,7 @@ public class SensorActivity extends Activity implements SensorEventListener, Vie
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
                     //display.setText("" + String.valueOf(currentReading));
-                    Toast t=Toast.makeText(getApplicationContext(),formattedNumber,Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(),formattedNumber,Toast.LENGTH_LONG).show();
 
 
                 }
@@ -155,7 +155,7 @@ public class SensorActivity extends Activity implements SensorEventListener, Vie
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
                     //display.setText("" + String.valueOf(currentReading));
-                    Toast t=Toast.makeText(getApplicationContext(),formattedNumber,Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(),formattedNumber,Toast.LENGTH_LONG).show();
 
 
                 }
@@ -182,6 +182,8 @@ public class SensorActivity extends Activity implements SensorEventListener, Vie
 
     @Override
     public void onClick(View v) {
+        Intent in=getIntent();
+
 
     }
 
